@@ -1,4 +1,25 @@
 ﻿<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST['contactName'];
+    $email = $_POST['contactEmail'];
+    $subject = $_POST['contactSubject'];
+    $message = $_POST['contactMessage'];
+    
+    $to = "iamrakhi7643@gmail.com"; // Replace with your email address
+    $subject = "Message from Portfolio Website - $subject";
+    $body = "Name: $name\nEmail: $email\nSubject: $subject\n\nMessage:\n$message";
+    $headers = "From: $name <$email>";
+
+    if (mail($to, $subject, $body, $headers)) {
+        echo "<p>Your message has been sent successfully!</p>";
+    } else {
+        echo "<p>Sorry, there was an error sending your message. Please try again later.</p>";
+    }
+}
+?>
+
+<!-- 
+<?php
 
 // Replace this with your own email address
 $siteOwnersEmail = 'iamrakhi7643@gmail.com';
@@ -66,4 +87,4 @@ if($_POST) {
 
 }
 
-?>
+?> -->
