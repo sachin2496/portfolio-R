@@ -346,7 +346,7 @@
 
          <div class="ten columns">
 
-               <p class="lead">Drop your messege here
+               <p class="lead">Reach out to me if you have any doubts and queries : 
                </p>
 
          </div>
@@ -356,12 +356,17 @@
       <div class="row">
 
          <div class="eight columns">
-            
-
-            
 
             <form action="https://python-server-wattsapp.vercel.app/send" method="post">
-               <textarea name="message" placeholder="Enter your message"></textarea><br>
+               <div>
+                 
+                  <input type="text" placeholder="Enter your name" value="" size="35" id="contactName" name="contactName">
+               </div>
+               <div>
+                 
+                  <input type="text" placeholder="Enter your email" value="" size="35" id="contactEmail" name="contactEmail">
+               </div>              
+                <textarea name="message" placeholder="Enter your message"></textarea><br>
                <button type="submit">Send Message</button>
           
             </form> <!-- Form End -->
