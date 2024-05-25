@@ -15,7 +15,7 @@ def send_whatsapp():
     to_whatsapp_number = 'whatsapp:+917643927304'
 
     client = Client(account_sid, auth_token)
-    message_body = request.form['contactMessage']
+    message_body = request.form['message']
     client.messages.create(body=message_body, from_=from_whatsapp_number, to=to_whatsapp_number)
 
     return 'WhatsApp message sent successfully!'
